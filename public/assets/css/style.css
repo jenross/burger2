@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Fredoka One', cursive;
+}
+
+.burger-img {
+    width: 200px; 
+    height: 200px;
+}
+
+.burger-list {
+    font-size: 22px;  
+    border: 2px groove black;
+}
+
+.burger-list-container {
+    padding: 20px;  
+}
+
+label {
+    font-size: 32px; 
+}
+
+.devoured-burgers {
+    color: grey; 
+    text-decoration-line: line-through;  
+}

@@ -1,0 +1,36 @@
+<h1 class="text-center mt-3">Eat-Da-Burger</h1>
+
+<img src="assets/img/burger-img.jpg" alt="burger" class="burger-img img-fluid mx-auto d-block mt-3">
+
+<h2 class="text-center mt-3">Choose a burger and devour it!</h2>
+
+<div class="burger-list-headers mt-3 d-flex justify-content-around">
+    <h3>Yum!</h3>
+    <h3>Gone!</h3>
+</div>
+
+<div class="mt-2 d-flex burger-list-container justify-content-around">
+    <ul class="burger-list ready-to-eat">
+        {{#each burger}}
+            {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+            {{/unless}}
+        {{/each}}
+    </ul>
+
+    <ul class="burger-list devoured-burgers">
+        {{#each burger}}
+            {{#if devoured}} 
+                {{> burgers/burger-block devoured=false}}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<form class="d-flex justify-content-center create-burger-form col-md-6 mt-3">
+  <div class="form-group">
+    <label for="burgersubmit">Add a burger</label>
+    <input type="text" name="name" class="form-control" id="addburger">
+    <button type="submit" class="btn btn-success create-burger mt-3">Submit</button>
+  </div>
+</form>
